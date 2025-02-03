@@ -1,0 +1,171 @@
+
+html {
+    cursor: url("glassdown.png"), auto;
+    background-image: url("background.gif");
+    background-size: cover;
+}
+
+
+.image {
+    position: absolute;
+    /*width: 5%;*/
+    width: 8%;
+}
+
+.cickable-image {
+
+}
+
+.background-image {
+
+}
+
+.image:hover {
+    transform: scale(1.05);
+    opacity: 80%;
+    transition: all .2s;
+    cursor: url("glass.png"), auto;
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.textContainer {
+    width: 30%;
+
+}
+
+.gameContainer {
+    background-image: url("groceryBackground.png");
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: 8%;
+    margin-top: 1%;
+    width: 800px;
+    height: 600px;
+    /*border-radius: 80px;*/
+    border: 15px outset rgb(146, 190, 223);
+    background-color: white;
+}
+
+
+h1 {
+    font-family: monospace;
+    text-align: right;
+    font-size: 400%;
+    margin-bottom: 2%;
+    color: rgb(76, 119, 156);
+    text-shadow: 0px 3px 1px rgb(255, 255, 255);
+}
+
+.subheading {
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+    margin-top: 2%;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 3px 1px rgb(255, 255, 255);
+}
+
+.subheadingTwo {
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 3%;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 3px 1px rgb(255, 255, 255);
+}
+
+/*game over*/
+h2 {
+    font-family: monospace;
+    text-align: right;
+    font-size: 400%;
+    margin-bottom: -13%;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 3px 1px rgb(255, 255, 255);
+}
+
+.timerDisplay {
+    font-family: monospace;
+    text-align: right;
+    font-size: 400%;
+    margin-bottom: 6%;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 3px 1px rgb(255, 255, 255);
+}
+
+.start {
+    font-family: monospace;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5%;
+        font-family: monospace;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+        border: rgb(255, 255, 255);
+        border-width: 4px;
+        border-style: outset;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+        transition: all 0.5s;
+        transform-origin: center;
+    }
+    .start:hover {
+        transform: scale(1.2); /* Scales the button uniformly */
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        border: rgb(0, 0, 0);
+        border-style: inset;
+        border-width: 4px;
+        transition: all 0.5s;
+    }
+
+.refreshButton {
+    font-family: monospace;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-left: auto;
+    margin-right: 0px;
+    background-color: rgb(0, 0, 0);
+    border: rgb(255, 255, 255);
+    border-width: 4px;
+    border-style: outset;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s;
+    transform-origin: center;
+}
+
+.refreshButton:hover {
+    transform: scale(1.2); /* Scales the button uniformly */
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: rgb(76, 119, 156);
+    border-style: inset;
+    border-width: 4px;
+    transition: all 0.5s;
+}
+
+@keyframes blink {
+
+    0% { opacity: 1; }
+
+    50% { opacity: 0; }
+
+    100% { opacity: 1; }
+
+}
