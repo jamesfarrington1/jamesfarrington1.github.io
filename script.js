@@ -1,7 +1,19 @@
+//Sounds
+const correctSound = new Audio("correct.wav");
+const incorrectSound = new Audio("wrong.wav");
+const victoryMusic = new Audio("victory.wav");
+const gameOverMusic = new Audio("gameOver.mp3");
+const groceryMusic = new Audio("grocery.mp3")
+
+groceryMusic.currentTime = 0;
+groceryMusic.play();
+groceryMusic.loop = true;
+groceryMusic.volume = 1;
+
 // Images
 const allImages = [
     'green Apple.png',
-    'banana.png',
+    'bananas.png',
     'beet.png',
     'carrot.png',
     'eggplant.png',
@@ -45,7 +57,7 @@ function spawnImages() {
 
     shuffledImages.forEach(imageSrc => {
         const isDecoy = !findList.includes(imageSrc.split('.')[0]);
-        const numDuplicates = isDecoy ? Math.floor(Math.random() * 3) + 1 : 1;
+        const numDuplicates = isDecoy ? Math.floor(Math.random() * 5) + 1 : 1;
         
         for (let i = 0; i < numDuplicates; i++) {
             const img = document.createElement('img');
@@ -75,7 +87,11 @@ function spawnImages() {
         img.addEventListener('click', function () {
             if (img.dataset.item === findList[currentCorrectIndex].split('.')[0]) {
                 img.classList.add('grow-fade');
-
+                
+                //Correct Sound Effect
+                correctSound.currentTime = 0;
+                correctSound.play();
+                
                 setTimeout(() => {
                     img.style.display = 'none';
                 }, 1000);
@@ -103,6 +119,9 @@ function spawnImages() {
             } else {
                 //alert('Wrong item or wrong order! Try again.');
                 showWrongEffect(img);
+                //Wrong Sound Effect
+                incorrectSound.currentTime = 0;
+                incorrectSound.play();
             }
         });
         gameContainer.appendChild(img);
@@ -144,6 +163,10 @@ function gameOver(){
     document.querySelector('h2').innerHTML = 'GAME OVER';
     document.querySelector('h2').classList.add('blink-lose-text');
 
+    gameOverMusic.currentTime = 0;
+    gameOverMusic.play();
+    gameOverMusic.loop = true;
+
     const gameImages = document.getElementsByClassName('game-image');
     
     for (let i = 0; i < findList.length; i++) {
@@ -164,6 +187,10 @@ function gameWin(){
     clearInterval(timer);
     document.querySelector('h2').innerHTML = 'YOU WIN';
     document.querySelector('h2').classList.add('dance');
+
+    victoryMusic.currentTime = 0;
+    victoryMusic.play();
+    victoryMusic.loop = true;
 
     const gameImages = document.getElementsByClassName('game-image');
 
