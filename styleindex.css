@@ -3,6 +3,7 @@ html {
     cursor: url("glassdown.png"), auto;
     background-image: url("background.gif");
     background-size: cover;
+    text-align: center;
 }
 
 
@@ -10,6 +11,17 @@ html {
     position: absolute;
     /*width: 5%;*/
     width: 8%;
+}
+
+p {
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 3px 1px rgb(255, 255, 255);
 }
 
 .cickable-image {
@@ -26,15 +38,22 @@ html {
     transition: all .2s;
     cursor: url("glass.png"), auto;
 }
-
 .wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
 }
 
 
 .textContainer {
-    width: 30%;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
 
@@ -136,9 +155,11 @@ h2 {
     font-family: monospace;
     font-size: 16px;
     color: rgb(255, 255, 255);
-    display: block;
+    display: flex;
     margin-left: auto;
-    margin-right: 0px;
+    margin-right: auto;
+    margin-bottom: 1%;
+    margin-top: 1%;
     background-color: rgb(0, 0, 0);
     border: rgb(255, 255, 255);
     border-width: 4px;

@@ -39,7 +39,9 @@ html {
 }
 
 .gameContainer {
-    background-image: url("groceryBackground.png");
+    background-image: url("spaceBackground.png");
+    background-size: auto;
+    background-repeat: repeat-x;
     width: 80%;
     position: relative;
     margin-left: auto;
@@ -49,7 +51,7 @@ html {
     height: 600px;
     /*border-radius: 80px;*/
     border: 15px outset rgb(146, 190, 223);
-    background-color: white;
+    background-color: rgb(11, 0, 58);
 }
 
 

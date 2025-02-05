@@ -1,18 +1,23 @@
 // Images
 const allImages = [
-    'green Apple.png',
-    'banana.png',
-    'beet.png',
-    'carrot.png',
-    'eggplant.png',
-    'pineapple.png',
-    'lemon.png',
-    'avocado.png',
-    'corn.png',
-    'tomato.png',
-    'orange.png',
-    'pumpkin.png',
-    'broccoli.png'
+    'shell.png',
+    'oyster.png',
+    'beach Ball.png',
+    'palm Tree.png',
+    'beach Chair.png',
+    'umbrella.png',
+    'sand Castle.png',
+    'clownfish.png',
+    'starfish.png',
+    'sunglasses.png',
+    'jellyfish.png',
+    'flip Flop.png',
+    'bucket & Shovel.png',
+    'kite.png',
+    'snorkel Mask.png',
+    'sunscreen.png',
+    'coconut.png',
+    'flamingo Floatie.png'
 ];
 
 let findList = [];
@@ -45,7 +50,7 @@ function spawnImages() {
 
     shuffledImages.forEach(imageSrc => {
         const isDecoy = !findList.includes(imageSrc.split('.')[0]);
-        const numDuplicates = isDecoy ? Math.floor(Math.random() * 3) + 1 : 1;
+        const numDuplicates = isDecoy ? Math.floor(Math.random() * 4) + 1 : 1;
         
         for (let i = 0; i < numDuplicates; i++) {
             const img = document.createElement('img');
@@ -175,7 +180,7 @@ function gameWin(){
 }
 
 let timer;
-let remainingTime = 10;
+let remainingTime = 8;
 
 // Timer
 function startTimer(){

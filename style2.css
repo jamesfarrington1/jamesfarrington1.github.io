@@ -39,7 +39,8 @@ html {
 }
 
 .gameContainer {
-    background-image: url("groceryBackground.png");
+    background-image: url("beachbackground.png");
+    background-size: cover;
     width: 80%;
     position: relative;
     margin-left: auto;
@@ -50,6 +51,7 @@ html {
     /*border-radius: 80px;*/
     border: 15px outset rgb(146, 190, 223);
     background-color: white;
+     cursor: url("glassdown.png"), auto;
 }
 
 

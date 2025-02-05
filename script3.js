@@ -1,18 +1,18 @@
 // Images
 const allImages = [
-    'green Apple.png',
-    'banana.png',
-    'beet.png',
-    'carrot.png',
-    'eggplant.png',
-    'pineapple.png',
-    'lemon.png',
-    'avocado.png',
-    'corn.png',
-    'tomato.png',
-    'orange.png',
-    'pumpkin.png',
-    'broccoli.png'
+    'earth.png',
+    'mercury.png',
+    'venus.png',
+    'jupiter.png',
+    'mars.png',
+    'saturn.png',
+    'uranus.png',
+    'neptune.png',
+    'pluto.png',
+    'rocket Ship.png',
+    'uFO.png',
+    'satellite.png',
+    'astronaut.png'
 ];
 
 let findList = [];
@@ -35,6 +35,17 @@ function setupFindList() {
     });
 }
 
+const planetScales = {
+    'mercury': 0.5,
+    'venus': 0.95,
+    'earth': .7,
+    'mars': 0.3,
+    'jupiter': 2.5,
+    'saturn': 2.3,
+    'uranus': 1.15,
+    'neptune': 1.2,
+    'pluto': 0.4
+}
 
 //Spawn Images
 function spawnImages() {
@@ -59,8 +70,9 @@ function spawnImages() {
         img.style.left = `${Math.random() * (gameContainer.clientWidth - imgWidth - 40)}px`;  
 
         //scale
-        const randomScale = (Math.random() * 0.6) + 0.8;
-        img.style.transform = `scale(${randomScale})`;
+        const itemName = imageSrc.split('.')[0]; 
+        const scaleFactor = planetScales[itemName] || 1.0;
+        img.style.transform = `scale(${scaleFactor})`;
 
         //rotation
         const randomRotation = Math.floor(Math.random() * 360);
@@ -70,6 +82,17 @@ function spawnImages() {
         const randomMirror = Math.random() > 0.5 ? -1 : 1;
         img.style.transform += ` scaleX(${randomMirror})`;
 
+        //z axis
+        if (itemName === "jupiter") {
+            img.style.zIndex = "1";
+        } else if (itemName === "mercury") {
+            img.style.zIndex = "3";
+        } else if (itemName === "uFO") {
+            img.style.zIndex === "3.5";
+        } else if (itemName === "pluto") {
+            img.style.zIndex === "4";
+        } else {img.style.zIndex = "2";
+        }
 
         //Click
         img.addEventListener('click', function () {
@@ -175,7 +198,7 @@ function gameWin(){
 }
 
 let timer;
-let remainingTime = 10;
+let remainingTime = 6;
 
 // Timer
 function startTimer(){
